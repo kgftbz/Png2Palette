@@ -88,7 +88,7 @@ namespace MoO2_Png2Pallete
             }
 
             //make a pallete with these 256 colors
-            string _filename = Path.GetFileName(args[0]).Replace(".png", ".pal");
+            string _filename = Path.GetFileName(args[0]).ToLower().Replace(".png", ".pal");
             Byte[] _fileBytes = new byte[1048];
             Byte[] _headerBytes = new byte[]{0x52, 0x49, 0x46, 0x46, 0x10, 0x04, 0x00, 0x00, 0x50, 0x41, 0x4c, 0x20, 0x64, 0x61, 0x74, 0x61,
                                              0x04, 0x04, 0x00, 0x00, 0x00, 0x03, 0x00, 0x01};
